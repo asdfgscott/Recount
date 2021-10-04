@@ -10,7 +10,7 @@ namespace Recount
 		{
 			IDictionary<string, int> candidates = new Dictionary<string, int>();
 			string name;
-			int x;
+			int i;
             int maxCount = 0;
             int countOfMaxCount = 0;
 			string maxName = "Someone Famous";
@@ -24,12 +24,12 @@ namespace Recount
 				if (name == "***"){
                     break;
                 }
-				for (x = 0; x < name.Length; x++){
-                    if (name[x] != '-' && name[x] != ' ' && Char.IsLetterOrDigit(name, x) == false){
+				for (i = 0; i < name.Length; i++){
+                    if (name[i] != '-' && name[i] != ' ' && Char.IsLetterOrDigit(name, i) == false){
                         break;
                     }
                 }
-				if (x != name.Length){
+				if (i != name.Length){
 					continue;
 				}
 				count++;
