@@ -10,7 +10,6 @@ namespace Recount
 		{
 			IDictionary<string, int> candidates = new Dictionary<string, int>();
 			string name;
-			int i;
             int maxCount = 0;
             int countOfMaxCount = 0;
 			string maxName = "Someone Famous";
@@ -24,14 +23,6 @@ namespace Recount
 				if (name == "***"){
                     break;
                 }
-				for (i = 0; i < name.Length; i++){
-                    if (name[i] != '-' && name[i] != ' ' && Char.IsLetterOrDigit(name, i) == false){
-                        break;
-                    }
-                }
-				if (i != name.Length){
-					continue;
-				}
 				count++;
                 // Check if the name is already in the dictonary
 				if (candidates.ContainsKey(name)){
